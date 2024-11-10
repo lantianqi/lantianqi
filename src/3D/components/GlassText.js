@@ -17,10 +17,9 @@ function GlassText({ children, color, ...props }) {
             position={[0, 0, -10]}
             scale={[-1, 1, 1]}
             ref={ref}
-            size={w / 9}
+            size={w / 16}
             maxWidth={[-w / 5, -h * 2, 3]}
-            // font={"/fonts/gt.json"}
-            font={"fonts/Arial_Regular.json"}
+            font={"fonts/gt.json"}
             curveSegments={24}
             brevelSegments={1}
             bevelEnabled

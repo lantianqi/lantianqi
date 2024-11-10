@@ -1,22 +1,25 @@
 // ColorPickerComponent.jsx
 import React, { useState } from 'react';
 import { SketchPicker } from 'react-color';
+import { MuiColorInput } from "mui-color-input";
+import {
+  createTheme,
+  CssBaseline,
+  ThemeProvider,
+  Typography
+} from "@mui/material";
 import { Box, Button } from '@mui/material';
 
-const ColorPicker = ({ color, onColorChange }) => {
-  const [displayColorPicker, setDisplayColorPicker] = useState(false);
+const ColorPicker = () => {
+
+  const [color, setColor] = useState("#000000");
+
+  const handleChange = (color) => {
+    setColor(color);
+  };
 
   return (
-    <Box height={200}>
-      <Button variant="contained" onClick={() => setDisplayColorPicker(!displayColorPicker)}>
-        Pick Color
-      </Button>
-      {displayColorPicker && (
-        <Box mt={2}>
-          <SketchPicker color={color} onChangeComplete={onColorChange} />
-        </Box>
-      )}
-    </Box>
+    <MuiColorInput value={color} onChange={handleChange} />
   );
 };
 
