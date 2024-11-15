@@ -71,7 +71,7 @@ header {
   flex-direction: column;
 }
 
-.ColorInput {
+.ColorInputContainer {
   display: inline-block;
   position: absolute;
   top: 0;
@@ -80,6 +80,49 @@ header {
   height: 50px;
   /* For visibility */
   z-index: 2;
+}
+
+#ColorInput {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 50px;
+  /* For visibility */
+  z-index: 2;
+}
+
+.PresetInput {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 200px;
+  max-height: 50px;
+  overflow-y: hidden;
+  z-index: 2;
+  padding: 0;
+  margin: 0;
+}
+
+.BlurInput {
+  display: inline-block;
+  position: absolute;
+  top: 60;
+  left: 0;
+  min-width: 200px;
+  max-height: 50px;
+  overflow-y: hidden;
+  z-index: 2;
+  padding: 0;
+  margin: 0;
+}
+
+#demo-select{
+  min-width: 200px;
+  height: 50px;
+  padding: 0;
 }
 
 .SceneCanvas {
